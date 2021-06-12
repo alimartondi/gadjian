@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./contents/navbar";
+import Main from "./contents/main";
+import { useState } from "react";
 
 function App() {
+  const [sideBarShown, setSideBarShown] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar toggleSideBar={() => setSideBarShown(!sideBarShown)} />
+      <Main
+        active={sideBarShown}
+        toggleSideBar={() => setSideBarShown(!sideBarShown)}
+      />
     </div>
   );
 }
