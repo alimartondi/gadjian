@@ -1,23 +1,25 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
+// import Navbar from "./navbar";
 
 export default function Main({ active }) {
-  const [getData, setGetData] = useState([]);
-  useEffect(() => {
-    fetch("https://randomuser.me/api/?page=3&results=10&seed=abc")
-      .then((response) => response.json())
-      .then((randomUsers) => setGetData(randomUsers.results));
-  }, []);
+  // const [getData, setGetData] = useState([]);
+  // useEffect(() => {
+  //   fetch("https://randomuser.me/api/?page=3&results=10&seed=abc")
+  //     .then((response) => response.json())
+  //     .then((randomUsers) => setGetData(randomUsers.results));
+  // }, []);
 
   return (
-    <div className="main">
-      <div className="container-2xl flex pt-12 md:pt-16 ">
-        <div
+    <div className="main z-10 w-full">
+      <div className="data">
+        this is dashboard
+        {/* <div
           className={`h-screen w-full bg-white lg:left-0 pt-5 lg:pt-10 fixed lg:relative  lg:w-4/12 xl:w-1/5 2xl:w-72 duration-300 ${
             active ? "left-0" : "-left-full opacity-50"
           } `}
-        >
-          <hr className="mb-4 -mt-2 md:hidden" />
-          <ul className="pl-3 md:pl-10 flex flex-col justify-between h-28 fixed">
+        > */}
+        {/* <hr className="mb-4 -mt-2 md:hidden" /> */}
+        {/* <ul className="pl-3 md:pl-10 flex flex-col justify-between h-28 fixed">
             <li className="font-semibold flex">
               <a href="/" className="flex">
                 <div className="side-menu__icon">
@@ -81,10 +83,9 @@ export default function Main({ active }) {
                 <div className="side-menu__title ml-3">Daily Attendance</div>
               </a>
             </li>
-          </ul>
-        </div>
-
-        <div className="content block w-full p-8 bg-gray-100">
+          </ul> */}
+        {/* </div> */}
+        {/* <div className="content block w-full p-8 bg-gray-100">
           <div className="top-bar bg-white p-4 block md:flex md:justify-between">
             <div>
               <h1 className="text-2xl font-bold uppercase text-left text-teal">
@@ -193,7 +194,7 @@ export default function Main({ active }) {
               </div>
             ))}
           </section>
-        </div>
+        </div> */}
       </div>
     </div>
   );
